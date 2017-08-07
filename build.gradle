@@ -18,3 +18,7 @@ dependencies {
             [group: 'org.scalatest', name: 'scalatest_2.12', version: '3.0.3']
     )
 }
+
+tasks.withType(Test) {
+    systemProperty 'webdriver.chrome.driver', 'src/test/resources/utils/chromedriver'
+}
